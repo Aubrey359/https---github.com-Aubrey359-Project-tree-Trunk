@@ -1,0 +1,237 @@
+/* Lemook Gardens Restaurant - Modern Style */
+:root {
+  --main-green: #1e4d2b;
+  --accent-orange: #e67e22;
+  --text-color: #f0f0f0;
+  --bg-color: #121212;
+  --soft-gray: #1f1f1f;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+header.container {
+  background-image: url('gazebo comfy.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 3.6rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 4px solid var(--accent-orange);
+}
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+nav a:hover, .gallery-link:hover {
+  color: var(--accent-orange);
+}
+.hero {
+  background-image: url('field.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 7rem 2rem 5rem 2rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+.hero p {
+  font-size: 1.5rem;
+  color: var(--accent-orange);
+}
+.section {
+  padding: 4rem 0;
+  background-color: var(--soft-gray);
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.section:nth-child(even):not(#about) {
+  background-color: var(--bg-color);
+}
+.section h2 {
+  color: var(--accent-orange);
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+.section p {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.15rem;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.gallery img {
+  width: 320px;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.13);
+  transition: transform 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(230,103,34,0.25);
+}
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  background-color: #232323;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.booking-form input,
+.booking-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+.booking-form button {
+  padding: 1rem;
+  background-color: var(--accent-orange);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.booking-form button:hover {
+  background-color: #cc6d1f;
+}
+footer {
+  background-color: var(--main-green);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-radius: 10px 10px 0 0;
+}
+.socials {
+  text-align: center;
+  margin-top: 2rem;
+}
+.social-icons a {
+  color: var(--accent-orange);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #fff;
+}
+.gallery-btn {
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  padding: 0.9rem 2.2rem;
+  background-color: var(--accent-orange);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.gallery-btn:hover {
+  background-color: #cc6d1f;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+.bnb-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.2rem 0 0.5rem 0;
+}
+@media (max-width: 900px) {
+  .gallery img {
+    width: 220px;
+    height: 140px;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 600px) {
+  header.container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .hero {
+    padding: 3rem 1rem;
+    background-size: cover;
+  }
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .booking-form {
+    padding: 1.2rem 0.5rem;
+  }
+  .gallery-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  .bnb-btn-group {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: stretch;
+  }
+} 
